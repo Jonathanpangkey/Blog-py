@@ -1,0 +1,136 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+.login{
+    padding-top: 70px;
+    width: 50%;
+}
+
+
+a {
+text-decoration: none;
+transition: all 0.4s ease;
+font-weight: 800;
+color: #20212c;
+}
+
+.navbar {
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    
+}
+
+
+li {
+    background-color: #ccc;
+    box-shadow:  0 1px 5px rgba(104, 104, 104, 0.8);
+}
+.form {
+    box-shadow:  0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+
+
+section {
+z-index: 2;
+position: relative;
+}
+
+.long{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+
+.typing-demo {
+    width: 20.5ch;
+    animation: typing 1s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+   
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(rgba(17, 7, 254, 0.7), rgba(0, 224, 254, 0.7));
+z-index: -1;
+}
+
+.bg-cover {
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.hero-section {
+min-height: 90vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+footer {
+    background: linear-gradient(to right,#38a7b6, #1107fe);
+    color: #fff;
+    margin-top: 100px;
+}
+
+footer a {
+    color: #fff;
+}
+
+
+
+@media (max-width:700px){
+    h1,h2,h3,h4{
+        font-size: 30px;
+    }
+    p{
+        font-size: 13px;
+    }
+
+    .typing-demo {
+        width: 15.5ch;
+        animation: typing 1s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+      
+      
+      }
+    .hero-section {
+      min-height: 65vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    .bg-cover {
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      }
+    .login{
+        padding-top: 70px;
+        width: 70%;
+    }
+    
+
+}

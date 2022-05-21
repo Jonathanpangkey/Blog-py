@@ -1,0 +1,116 @@
+
+    
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    
+    
+        <title>Read</title>
+      </head>
+      <body>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+          <a class="navbar-brand" href="#">Blog</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <div class="navbar-nav">
+              {% if sessionn in session %}
+              <a class="nav-item nav-link" id="home" href="/">Write</a>
+              <a class="nav-item nav-link" id="home" href="/read">Blog</a> 
+              <a class="nav-item nav-link" id="home" href="/mywrite">Mycontent</a>
+              <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+              {% else %}
+              <a class="nav-item nav-link" id="login" href="/login">Login</a>
+              <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+
+        <!-- content -->
+        <div class="container py-5 mt-5">
+            <div class="container p-5 mt-3 ">
+             {% for data in data %}
+             <div>
+               <h2 class="mb-5 text-center">{{data.title}}</h2>
+             <p style="white-space: pre-line;">{{ data.data }}</p>
+             
+             </div>
+            </div>
+            <div class="container">
+                <p style="font-size: 11px;" class="text-muted">Created at {{data.created_at.date()}} <br> By {{data.username}}</p>
+            </div>
+           {% endfor %}
+            
+        </div>
+   
+
+        <!-- footer -->
+        <footer class="py-4">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-6">
+                     <p class="mb-0">Copyright © 2015-2020. Designed By Salman</p>
+                 </div>
+                 <div class="col-md-6 text-md-end">
+                     <div>
+                         <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                         <a href="#"><i class='bx bxl-twitter'></i></a>
+                         <a href="#"><i class='bx bxl-dribbble'></i></a>
+                         <a href="#"><i class='bx bxl-instagram'></i></a>
+                         <a href="#"><i class='bx bxl-github'></i></a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+  
+        
+    
+        
+  <!-- javascript -->
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"
+        ></script>
+    
+     
+      </body>
+    </html>
+    
+
+  
+

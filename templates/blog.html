@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} 
+
+{% block content %}
+
+
+  <div class="container py-4">
+   <h2 class="text-center py-4">All blog</h2>
+   <ul class="list-group list-group-flush" id="notes">
+       {% for data in data %}
+       <li class="list-group-item">
+         <td><strong>{{data.title}}</strong></td>
+         <p style="font-size: 10px;" class="text-muted">{{data.created_at.date()}}</p>
+         <p  class="long" >{{ data.data }}</p>
+         
+           <p style="font-size:x-small" > 
+               <a href="/readmore/{{ data.id }}" class="text-primary">read</a><br>
+              <br>Written by user : {{data.username}}
+           </p>
+        
+       </li>
+       {% endfor %}
+     </ul>
+
+  </div>
+  <footer class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">Copyright © 2015-2020. Designed By Salman</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-dribbble'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+   
+  
+{% endblock %}
