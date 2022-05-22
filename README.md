@@ -6,7 +6,7 @@ Feature:
 - Add blog
 - Delete blog
 - View all blog
-- View you blog
+- View your blog
 
 ![Screenshot (49)](https://user-images.githubusercontent.com/102292312/169696172-caf88fb0-241e-44e2-a492-43bc7bfec8bc.png)
 
