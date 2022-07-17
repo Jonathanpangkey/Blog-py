@@ -130,10 +130,3 @@ def delete(id):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
-
-# There are misinterpretation about the important of college. Many people consider college is the place to get degree or certification and a good grades, they think after passing college they already have guarantee to get a great job with their degree. Sometimes yes but most of the times no. You can just go to college, get a good grades but you also need to learn the knowledge and skills that related to your dream job, and the most important is you need to expand your network.
-
-# You are young and you are in the community with thousand of people at the same age, you meet them, talk with them and you see and understand everyone has diffirent perspective and opinion, you learn to communicate and to socialize with them. The environment that is college helps put you in a mindset of succeed. In that place you can make friends that may benefit you in the future, that is the important of college.
